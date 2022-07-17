@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family: 'tele2_displayserif-regular';
+    src: url("../fonts/tele2_displayserif-regular.eot");
+    src: local("☺"), url("/fonts/tele2_displayserif-regular.woff") format("woff"), url("/fonts/tele2_displayserif-regular.ttf") format("truetype"), url("/fonts/tele2_displayserif-regular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'tele2_displayserif-bold';
+    src: url("/fonts/tele2_displayserif-bold.eot");
+    src: local("☺"), url("/fonts/tele2_displayserif-bold.woff") format("woff"), url("/fonts/tele2_displayserif-bold.ttf") format("truetype"), url("/fonts/tele2_displayserif-bold.svg") format("svg");
+    font-weight: bold;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'tele2_textsans-bold';
+    src: url("/fonts/tele2_textsans-bold.eot");
+    src: local("☺"), url("/fonts/tele2_textsans-bold.woff") format("woff"), url("/fonts/tele2_textsans-bold.ttf") format("truetype"), url("/fonts/tele2_textsans-bold.svg") format("svg");
+    font-weight: bold;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'tele2_textsans-regular';
+    src: url("/fonts/tele2_textsans-regular.eot");
+    src: local("☺"), url("/fonts/tele2_textsans-regular.woff") format("woff"), url("/fonts/tele2_textsans-regular.ttf") format("truetype"), url("/fonts/tele2_textsans-regular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal; 
+}
+
+.body{
+    
+    font-family: tele2_textsans-regular;
+}
+
+.wrap{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.wrap__left-side{
+    background: #fbfbfb;
+    margin-right: 20px;
+}
+
+.left-side__foto{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.foto__portret{
+    width: 70%;
+    margin: 0px auto;
+    border-radius: 0%;
+}
+
+.left-side__intro{
+    font-family: tele2_displayserif-bold;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: end;
+    padding-right: 1rem;
+    margin-top: 3.7rem;
+}
+
+.right-side__title{
+    margin-top: 3rem;
+    font-size: 38px;
+    font-family: tele2_displayserif-bold;
+    
+}
+
+
+
+.title__job{
+    font-size: 18px;
+    font-family: tele2_displayserif-regular;
+    font-weight: 400;
+}
+
+.right-side__contacts{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.location-block{
+    margin: 0px 2rem 0rem 0rem;
+}
+
+.location-block-title{
+    margin-bottom: 0.7rem;
+    font-family: tele2_textsans-bold;
+}
+
+.location-block-data{
+    font-family: tele2_textsans-regular;   
+}
+
+.right-side__intro{
+    font-family: tele2_textsans-regular;
+}

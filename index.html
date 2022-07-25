@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    
     <title>Шихов Роман Валентинович</title>
 </head>
 <body>
@@ -85,10 +86,36 @@
             <div class="portfolio__content-flex right-side">
                 <div class="content-flex__portfolio-item">
                     <div class="portfolio-item__title">Помошник дежурного Tele2</div>
+                    <div class="portfolio-item__slideshow-container">
+                        <div class="slideshow-container__mySlides fade">
+                            <div class="mySlides__numbertext">1 / 3</div>
+                            <img src="/img/screen shot/T2 helper screen shots/main.png">
+                            <div class="mySlides__text">Мониторинг аварий</div>
+                        </div>
+                        <div class="slideshow-container__mySlides fade">
+                            <div class="mySlides__numbertext">2 / 3</div>
+                            <img src="/img/screen shot/T2 helper screen shots/optimazation.png">
+                            <div class="mySlides__text">Работа с оптимизациями</div>
+                        </div>
+                        <div class="slideshow-container__mySlides fade">
+                            <div class="mySlides__numbertext">3 / 3</div>
+                            <img src="/img/screen shot/T2 helper screen shots/detail.png">
+                            <div class="mySlides__text">Детальный просмотр статуса аварий</div>
+                        </div>
+                        <a class="slideshow-container__prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="slideshow-container__next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="portfolio-item__dots">
+                            <span class="dots__dot" onclick="currentSlide(1)"></span>
+                            <span class="dots__dot" onclick="currentSlide(2)"></span>
+                            <span class="dots__dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                    
                 </div>
+                
             </div>
         </div>
     </div>
-    
+    <script src="./js/site.js"></script>
 </body>
 </html>

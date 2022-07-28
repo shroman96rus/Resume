@@ -167,8 +167,15 @@ body{
     font-family: 'tele2_textsans-bold';
 }
 
+.portfolio-item__text{
+    font-size: 0.7rem;
+    font-family: 'tele2_textsans-regular';
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
 .portfolio-item__slideshow-container{
-    position: absolute;
+    position: relative;
     margin: auto;
 }
 
@@ -178,7 +185,7 @@ body{
 }
 
 .slideshow-container__mySlides img{
-    max-width: 100%;
+    max-height: 300px;
 }
 
 .slideshow-container__prev, .slideshow-container__next {
@@ -188,7 +195,7 @@ body{
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: grey;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -206,11 +213,9 @@ body{
 }
 
 .mySlides__text {
-    color: yellow;
+    color: black;
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 30px;
     width: 100%;
     text-align: center;
   }
@@ -222,6 +227,12 @@ body{
     padding: 8px 12px;
     position: absolute;
     top: 0;
+  }
+
+  .portfolio-item__dots{
+    display: flex;
+    justify-content: center;
+
   }
   
   /* The dots/bullets/indicators */

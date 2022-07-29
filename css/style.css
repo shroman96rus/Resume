@@ -180,8 +180,11 @@ body{
 }
 
 .slideshow-container__mySlides {
-    display: none;
     max-width: 700px;
+}
+
+.slide-high{
+    display: none;
 }
 
 .slideshow-container__mySlides img{

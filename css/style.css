@@ -46,9 +46,10 @@ body{
     display: grid;
     grid-template-columns: 30% 70%;
     grid-auto-flow: row;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     row-gap: 5rem;
+    border-radius: 1rem;
 }
 
 .right-side{
@@ -63,7 +64,12 @@ body{
     
     font-family: tele2_displayserif-bold;
     font-size: 16px;
-} 
+}
+
+.wrap__header{
+    background-color: #dadada33;
+    
+}
 
 .header__foto{
     border-radius: 100%;
@@ -127,6 +133,10 @@ body{
     font-size: 16px;
 }
 
+.wrap__skills{
+    background-color: #dadada33;
+}
+
 .content__skill-list{
     display: grid;
     grid-template: 1fr / repeat(2,1fr);
@@ -147,6 +157,10 @@ body{
     height: 3rem;
     /* padding: 1rem 1rem; */
     
+}
+
+.wrap__portfolio{
+    background-color: #dadada33;
 }
 
 .item__span{
@@ -292,27 +306,34 @@ body{
     to {opacity: 1}
   }
 
-
-  .hystmodal {
+.image-modal{
     position: fixed;
     top: 0;
-    bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.459);
+    z-index: 99;
     overflow: hidden;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     -webkit-overflow-scrolling: touch;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center; /* см. ниже */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
-    z-index: 99;
-    /* Чтобы окно не прилипало к границе
-    браузера установим отступы */
-    padding:30px 0;
+    visibility: hidden;
 }
 
-.hystmodal__wrap {
+.image-modal--active{
+    visibility: visible;
+}
+
+.body-block{
+    overflow: hidden;
+}
+
+.image-modal__wrap{
     flex-shrink: 0;
     flex-grow: 0;
     width: 100%;
@@ -322,57 +343,58 @@ body{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    
 }
-.hystmodal__window {
+
+.image-modal__window{
     margin: 50px 0;
     flex-shrink: 0;
     flex-grow: 0;
-    background: #fff;
-    width: 600px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: transparent;
+    /* width: 800px; */
     max-width: 100%;
     overflow: visible;
-    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+    transition: transform 0.2s ease 0s, opacity 0.7s ease 0s;
     transform: scale(0.9);
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
-.hystmodal--active{
+.image-modal--active{
     visibility: visible;
 }
 
-.hystmodal--active .hystmodal__window{
+.image-modal--active .image-modal__window{
     transform: scale(1);
     opacity: 1;
 }
 
-.hystmodal__shadow{
-    position: fixed;
-    border:none;
-    display: block;
+
+
+.image-modal__close{
+    align-self: flex-end;
+    background: none;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: black(119, 119, 119);
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.5;
+    transition: opacity 0.7s;
+}
+
+.image-modal__close:hover{
+    opacity: 1;
+}
+
+
+  
+.image-modal__slideshow img{
     width: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 98;
-    opacity: 0;
-    transition: opacity 0.15s ease;
-    background-color: black;
+    height: 100%;
 }
-/* активная подложка */
-.hystmodal__shadow--show{
-    pointer-events: auto;
-    opacity: 0.6;
-}
-
-.hystmodal__opened {
-    position: fixed;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-
-

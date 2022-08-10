@@ -8,9 +8,45 @@ document.querySelectorAll(".portfolio-item__dots").forEach(element => {
     element.querySelectorAll(".dots__dot")[0].classList.add("active");
 });
 
+function EditDetails(e, currslider) {
+    let details = e.target.closest(".content-flex__portfolio-item").querySelector(".portfolio-item__details");
+    let detailsTitle = details.querySelector(".details__title").innerText = currslider.querySelector(".mySlides__text").innerText;
+    let detailcontent = details.querySelector(".details__content");
+    // console.log(details)
+    // console.log(detailsTitle)
+    // console.log(detailcontent)
+    switch (detailsTitle) {
+        case "Мониторинг аварий":
+            detailcontent.innerText = "Мониторинг аварий позволяет в режиме реального времени просматривать аварии на БС. Информация отображается в табличном виде и может быть отфильтрована по технологиям. Также сверху присутствует строка поиска.";
+            break;
+        case "Работа с оптимизациями":
+            detailcontent.innerText = "При помощи библиотеки Selenium Web Driver программа позволяет создать заявку на оптимизацию. При этом создается скриншот задания, парсится текст задания, далее заявка создается на сайте NOC и отправляется письмо на эл. почту с описанием задания и прикрепленном скриншоте из задания";
+            break;
+        case "Детальный просмотр статуса аварий":
+            detailcontent.innerText = "Позволяет отображать статус работы секторов, тип и серийный номер RRU смонтированных на БС, температуру на TCU, а также адресс БС, информацию по допуску и данные арендодателя на выбранной БС. Также к данной странице программы есть доступ из меню Справочник БС";
+            break;
+        case "Подключение к BaseBand по SSH":
+            detailcontent.innerText = "Осуществляет подключение к выбранному BB и позволяет как выводить информацию по секторам так и вводить комманды через предоставленное поле ввода. Также присутствуют горячие клавиши для наиболее часто использующихся комманд";
+            break;
+        case "Закрытие заявок TT в системе Servise Desk":
+            detailcontent.innerText = "При помощи библиотеки Selenium Web Driver осуществляется подключение к Servise Desk. Затем выбрав перечень заявок необходимых для закрытия, программа в автоматическом режиме пытается закрыть каждую из них";
+            break;
+        case "Формарование отчета по закрытым авариям":
+            detailcontent.innerText = "Программа позволяет сформировать отчет за выбранный период времени, на выбранных БС, отображающий все аварии, которые были на выбранных БС за выбранный промежуток времени. Отчет формируется в формате CVS ";
+            break;
+        case "Создание заявки для РТК в системе NOC":
+            detailcontent.innerText = "При помощи библиотеки Selenium Web Driver программа позволяет создать и отправить заявку в РТК. Для удобства пользователя реализована возможность выбрать тип заявки (АВР по умолчанию, ППР при выборе соответствующего флага), также в окне создания заявки отображается все активные аварии на БС, а также перечень дополнительных работ если таковые есть";
+            break;
+
+        default:
+            break;
+    }
+
+
+}
 
 document.querySelector('.portfolio__content-flex').addEventListener('click', function(e) {
-    console.log(e);
+
     if (e.target.className.includes('slideshow-container__prev')) {
         let sliders = e.target.parentNode.querySelectorAll(".slideshow-container__mySlides");
         let dots = e.target.parentNode.querySelectorAll(".dots__dot");
@@ -23,12 +59,14 @@ document.querySelector('.portfolio__content-flex').addEventListener('click', fun
                     sliders[sliders.length - 1].classList.add("slide-visible");
                     dots[sliders.length - 1].classList.add('active');
                     dots[i].classList.remove('active');
+                    EditDetails(e, sliders[sliders.length - 1]);
                     return;
                 }
                 if (i > 0 && i < sliders.length) {
                     sliders[i - 1].classList.add("slide-visible");
                     dots[i - 1].classList.add('active');
                     dots[i].classList.remove('active');
+                    EditDetails(e, sliders[i - 1]);
                     return;
                 }
             }
@@ -47,11 +85,13 @@ document.querySelector('.portfolio__content-flex').addEventListener('click', fun
                     sliders[0].classList.add("slide-visible");
                     dots[0].classList.add('active');
                     dots[i].classList.remove('active');
+                    EditDetails(e, sliders[0]);
                     return;
                 } else {
                     sliders[i + 1].classList.add("slide-visible");
                     dots[i + 1].classList.add('active');
                     dots[i].classList.remove('active');
+                    EditDetails(e, sliders[i + 1]);
                 }
                 return;
             }
@@ -69,6 +109,7 @@ document.querySelector('.portfolio__content-flex').addEventListener('click', fun
                 sliders[choiseSlider - 1].classList.add("slide-visible");
                 e.target.classList.add('active');
                 choiseDots[i].classList.remove('active');
+                EditDetails(e, sliders[choiseSlider - 1]);
                 return;
             }
         }

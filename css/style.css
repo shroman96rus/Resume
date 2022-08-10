@@ -308,6 +308,46 @@ body {
     }
 }
 
+
+/* Убираем стандартный маркер Chrome */
+
+details summary::-webkit-details-marker {
+    display: none
+}
+
+
+/* Убираем стандартный маркер Firefox */
+
+details>summary {
+    list-style: none;
+}
+
+.portfolio-item__details {
+    margin-top: 2rem;
+    font-family: 'tele2_textsans-regular';
+}
+
+.details__title {
+    font-family: 'tele2_textsans-bold';
+    color: #798bc7ec;
+    cursor: pointer;
+    /* letter-spacing: 0.07rem; */
+    margin-bottom: 0.2rem;
+}
+
+.details__title:hover {
+    text-decoration: underline;
+}
+
+.details__content {
+    padding: 1rem;
+    background: #dadada;
+    border-radius: 1rem;
+}
+
+
+/* ============================================================================================================ */
+
 .image-modal {
     position: fixed;
     top: 0;

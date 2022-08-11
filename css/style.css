@@ -345,6 +345,20 @@ details>summary {
     border-radius: 1rem;
 }
 
+.download__archive-project {
+    text-decoration: none;
+    font-family: 'tele2_textsans-regular';
+    color: #798bc7ec;
+}
+
+.portfolio-item__download {
+    margin-top: 0.5rem;
+}
+
+.download__archive-project:hover {
+    text-decoration: underline;
+}
+
 
 /* ============================================================================================================ */
 
@@ -430,6 +444,9 @@ details>summary {
 
 .image-modal__close:hover {
     opacity: 1;
+    /* background: white; */
+    border: 1px solid white;
+    color: white;
 }
 
 .image-modal__slideshow img {

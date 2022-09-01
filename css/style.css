@@ -32,6 +32,7 @@
 
 body {
     font-family: tele2_textsans-regular;
+    color: #1f2229;
 }
 
 .wrap {
@@ -67,9 +68,11 @@ body {
 }
 
 .header__foto {
-    border-radius: 100%;
-    width: 12rem;
+    border-radius: 50% 50%;
+    width: 80%;
+    height: 80%;
     margin: 0px auto;
+    align-self: center;
     /* border: 2px solid black; */
     background: url('../img/portret.jpg')0px 60%/cover no-repeat;
 }
